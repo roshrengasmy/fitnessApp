@@ -42,14 +42,14 @@ const BodyParts = () => {
     }
 
     return (
-        <View className="mx-4">
+        <View className="mx-4 flex-1">
             <Text className="font-semibold text-neutral-700" style={{ fontSize: hp(3) }}>Exercises</Text>
             <FlatList
                 data={bodyParts}
                 numColumns={2}
                 keyExtractor={item => item.name}
                 showsVerticalScrollIndicator={false}
-                contentContainerStyle={{ paddingBottom: 150, paddingTop: 10, }}
+                contentContainerStyle={{ paddingBottom: 100, paddingTop: 10, }}
                 columnWrapperStyle={{
                     justifyContent: 'space-between'
                 }}

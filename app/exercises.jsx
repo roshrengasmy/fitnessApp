@@ -47,7 +47,7 @@ const Exercises = () => {
                 />
                 <Text
                     style={{ fontSize: hp(4) }}
-                    className="text-white font-semibold text-left tracking-wide px-5 py-6 "
+                    className="text-white font-semibold text-left tracking-wide px-5 py-9 "
                 >
                     {item.name.charAt(0).toUpperCase() + item.name.slice(1)} Exercise
                 </Text>
@@ -60,7 +60,7 @@ const Exercises = () => {
                 <Ionicons name="caret-back-outline" size={hp(2.5)} color="white" />
             </TouchableOpacity>
             {/* Exercises */}
-            <View className="px-4 space-y-3  rounded-t-[20px] mb-20">
+            <View className="px-4 space-y-3  rounded-t-[20px] bg-white bottom-5 flex-[80%]">
                 <ExerciseList data={exercise} />
             </View>
         </View>

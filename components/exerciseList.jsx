@@ -14,13 +14,13 @@ const ExerciseList = ({ data }) => {
                 <TouchableOpacity
                     onPress={() => { router.push('exerciseDetails'), router?.setParams({ data: JSON.stringify(item) }) }}
                     className="flex mb-10"
-                    style={{ width: wp(44), height: wp(52) }}
+                    style={{ width: wp(44), height: wp(58) }}
                 >
-                    <View className="bg-neutral-200" style={{ width: wp(44.5), height: wp(45), right: 2 }} >
+                    <View className="bg-neutral-200" style={{ width: wp(44.5), height: wp(52), right: 2, borderRadius: 25 }} >
                         <Image
                             source={{ uri: item?.gifUrl }}
-                            contentFit="contain"
-                            style={{ width: wp(44), height: wp(45), }}
+                            contentFit="cover"
+                            style={{ width: wp(44), height: wp(52), borderRadius: 25 }}
                         />
                     </View>
                     <Text style={{ fontSize: hp(1.7) }} className="text-neutral-700 font-semibold mt-2 tracking-wide" >
@@ -32,13 +32,13 @@ const ExerciseList = ({ data }) => {
     }
 
     return (
-        <View >
+        <View className="flex-1" >
             <FlatList
                 data={data}
                 numColumns={2}
                 keyExtractor={item => item.name}
                 showsVerticalScrollIndicator={false}
-                contentContainerStyle={{ paddingBottom: 420, paddingTop: 20, }}
+                contentContainerStyle={{ paddingBottom: 50, paddingTop: 20, }}
                 columnWrapperStyle={{
                     justifyContent: 'space-between'
                 }}
